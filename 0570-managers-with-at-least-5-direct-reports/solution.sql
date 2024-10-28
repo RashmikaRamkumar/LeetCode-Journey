@@ -1,8 +1,11 @@
-SELECT name 
-FROM Employee 
-WHERE id IN (
-    SELECT managerId 
-    FROM Employee 
-    GROUP BY managerId 
+# Write your MySQL query statement below
+SELECT e.name
+FROM Employee e
+JOIN (
+    SELECT managerId, COUNT(*) AS report_count
+    FROM Employee
+    WHERE managerId IS NOT NULL
+    GROUP BY managerId
     HAVING COUNT(*) >= 5
-);
+) m ON e.id = m.managerId;
+
