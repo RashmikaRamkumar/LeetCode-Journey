@@ -17,15 +17,16 @@ class Solution {
         return null;
         while(fast!=null && fast.next!=null)
         {
-            System.out.println(slow.val);
-            System.out.println(fast.val);
-            temp =slow;
+            //System.out.println(slow.val);
+            //System.out.println(fast.val);
+            temp =slow; // we need the prev element not the mid ele as here it is not constained that the given element to be deleted will not be the end node so to tackle that we try to find the prev ele to the mid and do deletion as needed
             slow=slow.next;
             fast=fast.next.next;
         }
-        System.out.println(slow.val);
+        //System.out.println(slow.val);
 
        // slow.val=slow.next.val;
+       //not necessary here to assign the value as we deal the address here mainly
        if(temp!=null && temp.next!=null)
         temp.next=temp.next.next;
       
