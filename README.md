@@ -11,25 +11,3 @@ I try to solve problems using efficient algorithms and data structures. For each
 3. **Write clean and optimized code** to solve the problem.
 4. **Test the solution** with sample inputs and edge cases.
 5. **Document the solution** with explanations and examples for better understanding.
-
-## Repository Structure
-
-This repository contains the following files for each problem:
-
-1. **Solution.java**: The main solution file containing the code to solve the problem.
-2. **FullCode.java**: This file includes the solution code along with a `main` function for dynamic input and testing.
-3. **README.md**: This file, which provides an overview of the problem, the solution approach, and example inputs/outputs.
-
-## How to Run the Code
-
-1. Navigate to the directory containing the problem you want to solve:
-
-   ```bash
-   cd LeetCode-Journey
-2. Open the solution file (e.g., FullCode.java) in your favorite IDE or text editor.
-
-3. Compile and run the solution using the following commands:
-
-    ```bash
-    javac FullCode.java
-    java FullCode
