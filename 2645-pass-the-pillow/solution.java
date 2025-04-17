@@ -1,6 +1,6 @@
 class Solution {
-    public int passThePillow(int n, int time) {
-        int position=time%(2*(n-1));
-        return position<n? position +1 : 2*n-position-1;
+    public int passThePillow(int n, int t) {
+        int pos=t%(2*(n-1));
+        return pos<n ? pos+1 : 2*n-pos-1;
     }
 }
