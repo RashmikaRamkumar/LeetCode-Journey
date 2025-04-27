@@ -4,7 +4,7 @@ class Solution {
         while(numBottles>=numExchanges)
         {
             result+=numBottles/numExchanges;
-            numBottles=(numBottles%numExchanges) + (numBottles/numExchanges);
+            numBottles=(numBottles%numExchanges)+(numBottles/numExchanges);
         }
         return result;
     }
