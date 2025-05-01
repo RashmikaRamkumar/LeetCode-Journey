@@ -1,25 +1,20 @@
 class Solution {
-    public int distanceTraveled(int mainTank, int additionalTank) {
-        // int leftOver= mainTank<5 ? mainTank : (mainTank/5)+mainTank;
-        // return leftOver*10;
-        int res=0;
-        for(int i=1;i<=mainTank;i++)
+    public int distanceTraveled(int mt, int at) {
+        if(mt<5)
+            return mt*10;
+        int totalDist=0;
+        while(mt>=5)
         {
-            if(additionalTank!=0 && i%5==0)
+            totalDist+=5;
+            if(at!=0)
             {
-                additionalTank-=1;
-                mainTank+=1;
+                mt-=4;
+                at--;
             }
-            res+=10;
+            else
+                mt-=5;
         }
-        return res;
-
-        // int distance = 0;
-        // while (mainTank >= 5 && additionalTank >= 1) {
-        //     distance += 5 * 10;
-        //     mainTank -= 4;
-        //     additionalTank -= 1;
-        // }
-        // return distance + (mainTank * 10);
+        totalDist+=mt;
+        return totalDist*10;
     }
 }
