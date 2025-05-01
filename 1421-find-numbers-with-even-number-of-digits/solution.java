@@ -1,20 +1,10 @@
 class Solution {
-    public int digits(int i)
-    {
-        int digit=0;
-        while(i>0)
-        {
-            digit++;
-            i/=10;
-        }
-        return digit;
-    }
     public int findNumbers(int[] nums) {
+        //10^5 means 100000
         int count=0;
-        for(int i : nums)
+        for(int i:nums)
         {
-            int d=digits(i);
-            if(d%2==0)
+            if((i>9 && i<=99) || (i>999 && i<=9999) || (i==100000))
                 count++;
         }
         return count;
